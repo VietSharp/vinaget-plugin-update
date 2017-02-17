@@ -1,0 +1,334 @@
+hr {
+	height: 1px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-left-width: 0px;
+	padding: 0px;
+	margin-top: 1px;
+	margin-right: 0px;
+	margin-bottom: 2px;
+	margin-left: 0px;
+	border-bottom-width: 0px;
+	background-color: #4A4A4A;
+	color: #4A4A4A;
+}
+
+img { border: 0; }
+body {
+	font-family: "Segoe UI", Tahoma, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	background: #000 url(../../images/TRON.jpg) repeat-x;
+	margin: 0px;
+	padding: 0px;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#showresults{
+	margin-bottom:50px;
+}
+.showlistlink {
+	background:url(../../images/bglist.png);
+	height:100%;
+	width:100%;
+	color:#FFFFFF;
+	font-size:16px;
+	position:fixed;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	display: none;
+}
+
+tr { font-family: "Segoe UI", Tahoma; font-size: 11px; line-height: 14.5px; color: #FFFFFF; }
+input { font-family: "Segoe UI", Tahoma; font-size: 11px; }
+select { font-family: "Segoe UI", Tahoma; font-size: 11px; }
+textarea { font-family: "Segoe UI", Tahoma; font-size: 11.5px; }
+a { color: #55aaff;  }
+color { color: #FFFFFF; }
+
+/*.show-table {display: block;}*/
+
+.hide-table {display: none;}
+
+.filelist a {
+	text-decoration:none;
+}
+.filelist a:hover {
+	text-decoration:underline;
+}
+.title {
+	font-size: 18px;
+	font-weight: bold;
+}
+.g {
+	text-align:center;
+	color:#00FF00;
+}
+.y {
+	text-align:center;
+	color:#FFFF00;
+}
+.r {
+	text-align:center;
+	color:#FF0000;
+}
+.n {
+	text-align:center;
+	color:blue;
+}
+.style1 {
+	font-size: 12px;
+	font-weight: bold;
+}
+.style2 {font-weight: bold}
+
+.linkchecker-load{filter:alpha(opacity=20);-moz-opacity:0.2;opacity:0.2;}
+
+.font-black {
+	color:#000;
+}
+
+.font-blue {
+	color:#05F;
+}
+
+.caption {
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+th {
+	border-left: 1px solid white;
+}
+
+/*
+** All previous inline-style classes **
+*/
+
+
+/*the file checkbox menu */
+.chkmenu
+{
+	color: #99C9E6;
+}
+
+/* the files list table header */
+.flisttblhdr
+{
+	background-color: #4B433B;
+	text-align: center;
+	color: white;
+}
+
+.flisttblftr
+{
+	background-color: #4B433B;
+	color: white;
+	text-align: center;
+}
+
+.ftpprogress
+{
+	background-color:#FFFFFF;
+	margin:1px;
+	width:0%;
+	height:8px;
+}
+
+
+
+/* main.php */
+.plugincolhd
+{
+	background-color:#657B87;
+	color:#eee;
+	padding:1px;
+	width:117px;
+}
+
+.plugincollst
+{
+	color: #ccc;
+}
+.ServerFiles
+{
+	text-shadow: 0 0 0.5em #FF0000, 0 0 0.5em #FF0000, 0 0 0.5em #FF0000;
+	color: white;
+	background-image: url(images/images.jpg);
+	border:#C8C8C7 2px solid;
+	font-size:14px;
+	padding: 7px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.flistmouseon
+{
+	background-color: #F5A249;
+	color: black;
+}
+
+.flistmouseoff
+{
+	background-color: #D49659;
+	color: black;
+}
+
+.workswith
+{
+	text-align:center;
+	padding:3px;
+	color:#dedede;
+	margin:0 auto;
+	width:450px;
+	font-size:9px;
+	height:50px;
+	overflow:auto;
+	border:1px solid #666;
+}
+
+.autodel
+{
+	color:#FFCC00;
+}
+
+.cell-plugin
+{
+	color: white;
+	background-image: url(../../images/bluetoblue1.jpg);
+	border:#C8C8C7 2px solid;
+	border-radius: 5px;
+	height: 27px;
+	width: 116px;
+	font-weight:bold;
+	font-size: 11px;
+	text-align: center;
+	line-height: 27px;
+}
+
+.button-auto
+{
+	height: 27px;
+	width: 105px;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	font-family: "Tahoma";
+	font-size: 10px;
+	color: #FFAD00;
+	text-align: center;
+	border: 0px solid;
+	background: #17668C url(../../images/button_bg3.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+/* The progressbar for upload and download, including the outer div holder */
+.progressouter
+{
+	border:1px solid #FFFFFF; width:300px; height:10px;
+}
+
+.progressdown
+{
+	background-color:#FFFFFF;
+	width:0%;
+	height:8px;
+	margin: 1px;
+}
+
+.progressup
+{
+	background-color:#FFFFFF;
+	width:0%;
+	height:8px;
+	margin: 1px;
+}
+
+/* The "new-and-improved" tabs xD */
+
+.selected
+{
+	background-color: #85cbeb !important;
+}
+
+.cell-nav
+{
+	height: 31px;
+	width: 119px;
+	font-family: "Tahoma";
+	font-size: 10px;
+	color: #FFC500;
+	text-align: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.powered {
+	font-family: Arial;
+	color: #FF8700;
+	font-size: 10px;
+	line-height: 14px;
+	font-weight:bold;
+}
+.copyright {
+	font-family: Arial;
+	line-height: 14px;
+	color: #CCCCCC;
+	font-size: 10px;
+	font-weight:bold;
+}
+.copyright a {
+	color: red;
+	TEXT-DECORATION: none;
+}
+
+.ServerFiles:hover{
+	background: #DDEBFF;
+	box-shadow: 0 0 10px 1px #FFF;
+}
+
+.yanmenu{
+	border-radius: 5px;
+	border:#C8C8C7 1px solid;
+	background:#000;
+}
+
+#links{
+	resize: none;
+	height:100px;
+	width:550px;
+	outline:none;
+	transition: box-shadow 0.3s ease-in-out, background-image 0.5s ease-in-out;
+	-webkit-transition: box-shadow 0.3s ease-in-out, background-image 0.5s ease-in-out;
+	-moz-transition: box-shadow 0.3s ease-in-out, background-image 0.5s ease-in-out;
+	border-radius: 10px;
+	border:#C8C8C7 2px solid;
+	background-image: url(../../images/vmcd8.png);
+}
+
+#links:focus{
+	-webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
+	-moz-box-shadow:    0px 0px 10px rgba(255, 255, 255, 1);
+	box-shadow:         0px 0px 10px rgba(255, 255, 255, 1);
+	background-image: url(../../images/vmcjt.png);
+}
+
+.resetdownbutton{
+	color:#DA6F6F;
+	background-image: url(../../images/bluetoblue1.jpg);
+	border:#C8C8C7 2px solid;
+	font-size:12px;
+	padding: 3px;
+	border-radius: 5px;
+	font-weight:bold;
+}
+
+.resetdownbutton:hover{
+	background: #DDEBFF;
+	box-shadow: 0 0 10px 1px #FFF;
+}
