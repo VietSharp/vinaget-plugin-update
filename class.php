@@ -117,8 +117,8 @@ class getinfo
 		return (isset($_COOKIE['secureid']) && $_COOKIE['secureid'] == md5($this->config['admin']) ? true : $this->admin);
 	}
 	function getversion(){
-		$version = $this->curl("https://raw.githubusercontent.com/huykent/vinaget-2.7.0-HitPro-Rebuild/master/version.txt","","",0);
-		return intval($version);//b757ef04a04cb4bd5e0a653f405474a1cb868479/version.txt
+		$version = $this->curl("https://raw.githubusercontent.com/VietSharp/vinaget-plugin-update/master/version.txt","","",0);
+		return intval($version);
 	}
 	function notice($id="notice")
 	{
