@@ -19,14 +19,6 @@ class dl_nitroflare_com extends Download {
         return $cookie;
     }
      
-/*     public function Leech($url) {
-        $data = $this->lib->curl($url,$this->lib->cookie,"");
-        if(preg_match('/location: (.*)/', $data, $matches)) $data = $this->lib->curl("https://www.nitroflare.com".trim($matches[1]),$this->lib->cookie,"");
-        if((stristr($data, "This file has been removed due to inactivity")) || (stristr($data, "File doesn't exist")))  $this->error("dead", true, false, 2);
-        elseif(preg_match('@https?:\/\/\w+\.nitroflare\.com\/d\/[^"\'><\r\n\t]+@i', $data, $invo))
-        return trim($invo[0]);
-        return false;
-    } */
 	public function Leech($url) {
 		
 		$url = str_replace(array("http://", "http://www.", "https://www."), "https://", $url);
