@@ -215,7 +215,7 @@
 					<!-- Copyright please don't remove-->
 						<?php printf($obj->lang['footer']);?>
 						<STRONG><SPAN class='powered'>Based on <a href='https://github.com/giaythuytinh176/vinaget-script'>Vinaget 2.7.0 Final Revision <?php printf($obj->current_version); ?></a> by [FZ]<br/>
-						Rebuild code by ♥LTT♥. Current version: <a target='_blank' href='https://github.com/lethanhtuan2897/vinaget-plugin-update'><?php printf($obj->current_version2); ?></a></SPAN><br/>
+						Rebuild code by ♥Happy♥. Current version: <a target='_blank' href='https://github.com/VietSharp/vinaget-plugin-update'><?php printf($obj->current_version2); ?></a></SPAN><br/>
 						<SPAN class='copyright'>Copyright 2009-<?php echo date('Y');?> by <a href='http://vinaget.us/'>http://vinaget.us</a>. All rights reserved. </SPAN><br />
 					<!-- Copyright please don't remove-->
 					</div>
