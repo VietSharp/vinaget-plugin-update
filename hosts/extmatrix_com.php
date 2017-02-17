@@ -11,7 +11,7 @@ class dl_extmatrix_com extends Download {
     
     public function Login($user, $pass){
         $data = $this->lib->curl("http://www.extmatrix.com/login.php", "", "user={$user}&pass={$pass}&captcha=&submit=Login&task=dologin&return=.%2Fmembers%2Fmyfiles.php");
-		$cookie = $this->lib->GetCookies($data);
+		$cookie = $this->lib->GetAllCookies($data);
 		return $cookie;
     }
 	
