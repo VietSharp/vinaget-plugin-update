@@ -1,26 +1,10 @@
 <?php
 $host = array(); $alias = array(); 
 $alias['4share.vn'] = 'up.4share.vn';
-$alias['dfiles.eu'] = 'depositfiles.com';
-$alias['dfiles.ru'] = 'depositfiles.com';
-$alias['depositfiles.net'] = 'depositfiles.com';
-$alias['depositfiles.org'] = 'depositfiles.com';
-
-$alias['ul.to'] = 'uploaded.net';
-$alias['uploaded.to'] = 'uploaded.net';
-
-$alias['yfdisk.com'] = 'yunfile.com';
-$alias['filemarkets.com'] = 'yunfile.com';
-
-$alias['k2s.cc'] = 'keep2share.cc';
-
-
-$alias['4share.vn'] = 'up.4share.vn';
-$alias['playlist.chiasenhac.com'] = 'chiasenhac.com';
-$alias['d01.megashares.com'] = 'megashares.com';
-$alias['mega.1280.com'] = 'fshare.vn';
-$alias['rg.to'] = 'rapidgator.net';
-$alias['dl3.junocloud.me'] = 'junocloud.me';
+$alias['fs.vn'] = 'fshare.vn';
+$alias['share.vnn'] = 'share.vnn.vn';
+$alias['dfpan.com'] = 'yunfile.com';
+$alias['dix3.com'] = 'yunfile.com';
 $folderhost = opendir ( "hosts/" );
 while ( $hostname = readdir ( $folderhost ) ) {		
 	if($hostname == "." || $hostname == ".." || strpos($hostname,"bak") || $hostname == "hosts.php") {continue;}

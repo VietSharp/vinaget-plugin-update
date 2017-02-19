@@ -13,8 +13,8 @@ class dl_filejoker_net extends Download {
 	}
 	
 	public function Login($user, $pass){
-        $data = $this->lib->curl("https://filejoker.net/login", "", "email={$user}&password={$pass}&op=login&redirect=&rand=");
-        $cookie = $this->lib->GetCookies($data);
+        $data = $this->lib->curl("https://filejoker.net/login", "email={$user};", "email={$user}&password={$pass}&op=login&redirect=&rand=");
+        $cookie = $this->lib->GetAllCookies($data);
         return $cookie;
     }
 	

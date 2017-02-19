@@ -14,7 +14,7 @@ function showPlugin(){
 		$xout = $obj->acc[$host]['accounts'];
 		$max_size = $obj->acc[$host]['max_size'];
 		if (empty($xout[0]) == false && empty($host) == false) {
-			$hosts[] = '<span class="plugincollst">' . $host . ' ' . count($xout) . '</span><br/>';
+			$hosts[] = '<span class="plugincollst">' . $host . ' ' . count($xout) . '</span><img src="https://www.google.com/s2/favicons?domain='.$host.'"/><br/>';
 		}
 	}
 	if (isset($hosts)) {
