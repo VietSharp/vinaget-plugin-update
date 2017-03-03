@@ -1,14 +1,14 @@
 <?php
 $config = array();
 $config['secure'] = true;
-$config['password'] = "user1, user2, user3, user4";
-$config['admin'] = "admin";
-$config['homepage'] = "vinaget.us";
-$config['download_prefix'] = "vinaget_";
+$config['password'] = "Vnz-PRO!!, HIT@@@VNZ, (!!!!!&*$&@&$^$%^$@, (#&$(&#%*^@Q#(*$&@(Q#&$*@(&";
+$config['admin'] = "quandaica@@2016";
+$config['homepage'] = "anh18.net";
+$config['download_prefix'] = "";
 $config['download_suffix'] = "";
-$config['limitMBIP'] = 100 * 1024;
-$config['ttl'] = 6 * 60;
-$config['limitPERIP'] = 10;
+$config['limitMBIP'] = 100 * 1024000000000000000;
+$config['ttl'] = 6 * 60000;
+$config['limitPERIP'] = 100000000000000000000000000000000000000;
 $config['ttl_ip'] = 1;
 $config['max_jobs_per_ip'] = 100;
 $config['max_jobs'] = 500;
@@ -23,7 +23,7 @@ $config['showlinkdown'] = true;
 $config['showdirect'] = true;
 $config['redirectdl'] = false;
 $config['bbcode'] = true;
-$config['longurl'] = true;
+$config['longurl'] = false;
 $config['privatefile'] = false;
 $config['privateip'] = false;
 $config['checkacc'] = true;
@@ -42,6 +42,6 @@ $config['language'] = "english";
 $config['skin'] = "default";
 $config['cbox_url'] = "http://www4.cbox.ws/box/index.php?boxid=4270578&boxtag=vinaget31";
 $config['display_error'] = false;
-$config['hide_plugins_col'] = false;
+$config['hide_plugins_col'] = true;
 $config['debrid_mode'] = false;
 ?>

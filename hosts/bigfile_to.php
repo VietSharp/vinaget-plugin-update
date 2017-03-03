@@ -22,9 +22,10 @@ class dl_bigfile_to extends Download {
 		$id = explode('/',$url);
 		$id = $id[4];
 		$url = "https://www.bigfile.to/file/". $id;
-		//die($url);
+		
 		$data = $this->lib->curl($url, $this->lib->cookie, "");
 		if(stristr($data, '>The file could not be found.') || stristr($data, 'This file is no longer available.')) $this->error("dead", true, false, 2);
+		if(stristr($data, 'You have exceeded your download limit')) $this->error("LimitAcc", true, false, 2);
 		elseif(!$this->isredirect($data)) {
 			$data = $this->lib->curl($url, $this->lib->cookie, 'download=premium');
 			if($this->isredirect($data)) return trim($this->redirect);
