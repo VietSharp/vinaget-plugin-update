@@ -934,7 +934,7 @@ class stream_get extends getinfo
 			if (empty($this->api_ads3) == false) {
 				$lik = $this->api_zip($lik, $this->api_ads3);
 			}
-			if (empty($this->tinyurl) == false && empty($this->tinyurl_each_ziplink) == false) {
+			if (empty($this->tinyurl) == false && empty($this->tinyurl_each_ziplink) == true) {
 				$datalink = $this->tinyurl($lik);
 				if (preg_match('%(http:\/\/.++)%U', $datalink, $shortlink)) $lik = trim($shortlink[1]);
 			}
@@ -1135,7 +1135,7 @@ class stream_get extends getinfo
 			if (empty($this->api_ads3) == false) {
 				$lik = $this->api_zip($lik, $this->api_ads3);
 			}
-			if (empty($this->tinyurl) == false && empty($this->tinyurl_each_ziplink) == false) {
+			if (empty($this->tinyurl) == false && empty($this->tinyurl_each_ziplink) == true) {
 				$datalink = $this->tinyurl($lik);
 				if (preg_match('%(http:\/\/.++)%U', $datalink, $shortlink)) $lik = trim($shortlink[1]);
 			}
@@ -1595,7 +1595,6 @@ class Tools_get extends getinfo
 		}
 		else $filename = substr(strrchr($link, '/') , 1);
 		$filename = self::convert_name($filename);
-		$filename = str_replace(";", "", $filename);
 		return array(
 			$filesize,
 			$filename

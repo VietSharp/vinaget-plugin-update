@@ -23,8 +23,8 @@ class dl_depfile_com extends Download {
         if(stristr($data,'Page Not Found!') || stristr($data,'File was not found in the') || stristr($data,'Provided link contains errors')) $this->error("dead", true, false, 2);
         elseif(stristr($data,'You spent limit on urls') ) $this->error("limitacc", true, false, 2);
         elseif(stristr($data,'File is available only for Premium users.') ) $this->error("accfree".$user, true, false, 2);
-		$link = $this->lib->cut_str($data, "<td><a href='", "'>http");
-        return trim($link);
+		elseif(preg_match('@https?:\/\/[a-z]+\.depcloud\.com\/premdw\/\d+\/[a-z0-9]+\/[^"\'<>\r\n\t]+@i', $data, $giay)) 
+        return trim($giay[0]);
 		return false;
 		
     }//http://dl.depcloud.com/premdw/6293446/b3458ab7da5c6e47f12a2ef9c9c50825/Collection1-Video001._____p101-_8_d__traz-new_1108_-_mmm.flv
