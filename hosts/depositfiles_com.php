@@ -5,7 +5,7 @@ class dl_depositfiles_com extends Download
     
     public function CheckAcc($cookie)
     {
-        $data = $this->lib->curl("https://depositfiles.com/gold/payment_history.php", $cookie, "");
+        $data = $this->lib->curl("https://dfiles.eu/gold/payment_history.php", $cookie, "");
         if (stristr($data, 'You have Gold access until:')) {
             return array(
                 true,
@@ -25,7 +25,7 @@ class dl_depositfiles_com extends Download
     
     public function Login($user, $pass)
     {
-        $data   = $this->lib->curl("https://depositfiles.com/api/user/login?login=" . urlencode($user) . "&password=" . urlencode($pass), '', '');
+        $data   = $this->lib->curl("https://dfiles.eu/api/user/login?login=" . urlencode($user) . "&password=" . urlencode($pass), '', '');
         $cookie = "lang_current=en;" . $this->lib->GetCookies($data);
         return $cookie;
     }
@@ -33,6 +33,7 @@ class dl_depositfiles_com extends Download
     public function Leech($url)
     {
         list($url, $test) = $this->linkpassword($url);
+		$url = str_replace("%20"," ",$url);
         $tachid = explode("/", $url);
         if (preg_match("/\/files\/(.*)\/(.+)/i", $url, $id))
             $DFid = $id[1];
@@ -40,7 +41,7 @@ class dl_depositfiles_com extends Download
             $DFid = $tachid[4];
         else
             $DFid = $tachid[5];
-        $data = $this->lib->curl("https://depositfiles.com/api/download/file?&file_id=" . $DFid . "&file_password=" . urlencode($test), $this->lib->cookie, "", 0);
+        $data = $this->lib->curl("https://dfiles.eu/api/download/file?&file_id=" . $DFid . "&file_password=" . urlencode($test), $this->lib->cookie, "", 0);
         $page = @json_decode($data, true);
         if ($page['status'] !== "OK" && $page['error'] == "FileIsPasswordProtected")
             $this->error("reportpass", true, false);

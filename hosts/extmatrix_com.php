@@ -5,7 +5,7 @@ class dl_extmatrix_com extends Download {
 	public function CheckAcc($cookie){
 		$data = $this->lib->curl("http://www.extmatrix.com/", $cookie, "");
 		if(stristr($data, 'Premium End:')) return array(true, "Until ".$this->lib->cut_str($this->lib->cut_str($data, 'Premium End:</td>', '<tr'), '<td>', '</td>'));
-		//else if(stristr($data, 'Retype New password') && !stristr($data, 'Premium account expire')) return array(false, "accfree");
+		else if(stristr($data, 'Free Member')) return array(false, "accfree");
 		else return array(false, "accinvalid");
 	}
     

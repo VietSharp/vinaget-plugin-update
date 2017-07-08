@@ -3,9 +3,9 @@
 class dl_novafile_com extends Download {
 
 	public function CheckAcc($cookie){
-		$data = $this->lib->curl("https://novafile.com/?op=my_account", "lang=english;{$cookie}", "");
+		$data = $this->lib->curl("http://novafile.com/?op=my_account", "lang=english;{$cookie}", "");
 		if(stristr($data, 'Premium account expires:')) {
-			$checkbw = $this->lib->curl("https://novafile.com/?op=my_account", "lang=english;{$cookie}", "");
+			$checkbw = $this->lib->curl("http://novafile.com/?op=my_account", "lang=english;{$cookie}", "");
 			return array(true, "Until ".$this->lib->cut_str($data, 'Premium Account expires:','<a href="') ."<br/> Traffic Available: " .$this->lib->cut_str($this->lib->cut_str($checkbw, '<td>Traffic Available:</td>','</tr>'), '<td>','</td>'));
 		}
 		elseif(stristr($data, 'FREE - member')) return array(false, "accfree");
@@ -13,12 +13,11 @@ class dl_novafile_com extends Download {
 	}
 
     public function Login($user, $pass){
-        $data = $this->lib->curl("https://novafile.com/login", "lang=english", "login={$user}&password={$pass}&op=login&rand=&redirect=");
+        $data = $this->lib->curl("http://novafile.com/login", "lang=english", "login={$user}&password={$pass}&op=login&rand=&redirect=");
 		return "lang=english;{$this->lib->GetCookies($data)}";
     }
 	
     public function Leech($url){
-		$url = str_replace("http://", "https://", $url);
 		$data = $this->lib->curl($url, $this->lib->cookie, "");
 		if(stristr($data, '>File Not Found<')) $this->error("dead", true, false, 2);
 		elseif(stristr($data,"different IP")) $this->error("blockIP", true, false);
