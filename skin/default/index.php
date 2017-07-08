@@ -171,7 +171,7 @@
 								<?php if($obj->isadmin()){
 									$obj->last_version = $obj->getversion();
 									if($obj->last_version > $obj->current_version2)
-										echo '<br><font color="#dbac58"><b>'.sprintf($obj->lang['update1']).'</b> - <a href="https://raw.githubusercontent.com/lethanhtuan2897/vinaget-plugin-update/master/vng31.r'.$obj->last_version.'.zip">'.sprintf($obj->lang['update2'],$obj->last_version).'</a></font>';
+										echo '<br><font color="#dbac58"><b>'.sprintf($obj->lang['update1']).'</b> - <a href="https://github.com/VietSharp/vinaget-plugin-update/archive/vng31.r'.$obj->last_version.'.zip">'.sprintf($obj->lang['update2'],$obj->last_version).'</a></font>';
 								}
 								?>
 								<br><font face=Arial size=1><span style="font-familty: Arial; color: #FFFFFF; font-size: 10px">Example: http://www.megaupload.com/?d=ABCDEXYZ<font size="3">|</font>password</span></font><BR>
